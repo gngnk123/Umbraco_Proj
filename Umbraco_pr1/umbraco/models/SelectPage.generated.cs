@@ -18,7 +18,7 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>SelectPage</summary>
+	/// <summary>Select Page</summary>
 	[PublishedModel("selectPage")]
 	public partial class SelectPage : PublishedContentModel, IHeaderProperties
 	{

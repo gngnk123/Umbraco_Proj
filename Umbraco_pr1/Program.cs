@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Configuration;
 namespace Umbraco_pr1
 {
     public class Program
@@ -15,5 +16,7 @@ namespace Umbraco_pr1
                     webBuilder.UseStaticWebAssets();
                     webBuilder.UseStartup<Startup>();
                 });
+     
     }
+    
 }

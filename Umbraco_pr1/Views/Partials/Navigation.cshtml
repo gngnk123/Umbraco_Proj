@@ -1,5 +1,9 @@
 ﻿@inherits UmbracoViewPage<IHeaderProperties>
 
+@{
+    var HomePage = Umbraco.AssignedContentItem.AncestorOrSelf<HomePage>();
+    var Children = HomePage.MainNavigation;
+}
 
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -11,12 +15,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Vehicles">Vehicles</a>
-                </li>
+                @if (Children != null && Children.Any())
+                {
+                    foreach(var item in Children)
+                    {
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="@item.Url">@item.Name</a></li>
+                    }
+                    }
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
