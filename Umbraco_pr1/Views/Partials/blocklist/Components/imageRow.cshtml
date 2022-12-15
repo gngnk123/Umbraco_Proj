@@ -1,0 +1,39 @@
+@inherits UmbracoViewPage<BlockListItem>
+
+    @{
+        var Row = (ImageRow)Model.Content;
+   
+        }
+
+
+        @* //aqedan*@
+        <div class="col-6">
+            <div class="p-3 border bg-light">
+        @if(Row.Link!=null)
+        {
+            @:<a href="@Row.Link.Url">
+        }
+
+                <div class="row">
+                    <h5>@Row.Make @Row.Model</h5>
+                </div>
+                <div class="row">
+                    <h7>@Row.Year</h7>
+                </div>
+                <div class="row">
+                    <img src="@Row.Image.Url()" class="img-thumbnail" alt="@Row.Make @Row.Model">
+                </div>
+                <div class="row">
+                    <h5>View Details</h5>
+                </div>
+
+        @if(Row.Link!=null)
+        {
+            @:</a>
+        }
+
+            </div>
+        </div>
+        
+        @* //aqamde*@
+

@@ -6,39 +6,9 @@
 }
 
 <body>
-
-    <div class="container overflow-hidden text-center">
-        <div class="row gy-5">
-
-           @* //aqedan*@
-            <div class="col-6">
-                <div class="p-3 border bg-light">
-                    <div class="row">
-                        <h5>mercedes benz</h5>
-                    </div>
-                    <div class="row">
-                        <h7>Production:</h7>
-                    </div>
-                    <div class="row">
-                        <img src="@Model.Icon.Url()" class="img-thumbnail" alt="Car">
-                    </div>
-                    <div class="row">
-                        <h5>View Details</h5>
-                    </div>
-                
-                </div>
-            </div>
-
-           @* //aqamde*@
-            <div class="col-6">
-                <div class="p-3 border bg-light">Custom column padding</div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">Custom column padding</div>
-            </div>
-            <div class="col-6">
-                <div class="p-3 border bg-light">Custom column padding</div>
-            </div>
-        </div>
-    </div>
+	<div class="container overflow-hidden text-center">
+		<div class="row gy-5">
+   @Html.GetBlockListHtml(Model.MainContent)
+	   </div>
+</div>
 </body>
