@@ -1,5 +1,9 @@
 @inherits UmbracoViewPage<BlockListItem>
 
-    @{
-        var Row = (RichTextRow)Model.Content;
+@{
+    var Row = (RichTextRow)Model.Content;
+    var Settings = (RichTextRowSettings)Model.Settings;
+    if (Settings?.Hide ?? false) {
+        return;
     }
+}

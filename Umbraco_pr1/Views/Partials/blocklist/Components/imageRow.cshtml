@@ -2,6 +2,10 @@
 
     @{
         var Row = (ImageRow)Model.Content;
+            var Settings = (ImageRowSettings)Model.Settings;
+    if (Settings?.Hide ?? false) {
+        return;
+    }
    
         }
 
