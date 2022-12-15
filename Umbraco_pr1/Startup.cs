@@ -35,7 +35,6 @@ namespace Umbraco_pr1
                 .AddComposers()
                 .Build();
         }
-
         /// <summary>
         /// Configures the application.
         /// </summary>
